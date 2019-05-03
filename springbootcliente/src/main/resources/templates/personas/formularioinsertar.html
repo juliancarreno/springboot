@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<link rel="stylesheet"
+	href="/webjars/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="/webjars/jquery/3.0.0/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<style>
+form {
+	margin: 20px;
+}
+</style>
+</head>
+
+<body>
+
+	<form action="insertar">
+
+		<div class="form-group">
+			<label for="nombre">Nombre:</label> <input type="text" name="nombre"
+				class="form-control" id="nombre" />
+
+			<div class="form-group">
+				<label for="apellidos">Apellidos:</label><input type="text"
+					name="apellidos" class="form-control" id="apellidos" />
+			</div>
+			<div class="form-group">
+				<label for="edad">Edad:</label><input type="text" name="edad"
+					class="form-control" id="edad" />
+			</div>
+			
+			<div class="form-group">
+			<input type="submit" value="enviar" class="btn btn-primary" />
+		</div>
+		</div>
+
+	</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<link rel="stylesheet" href="/webjars/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="/webjars/jquery/3.0.0/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<style>
+table , form {
+	margin:20px;
+}
+
+</style>
+</head>
+<table>
+
+	<tr th:each="persona:${lista}">
+		<td th:text="${persona.nombre}"></td>
+		<td th:text="${persona.apellidos}"></td>
+		<td th:text="${persona.edad}"></td>
+        <td><a th:href="@{borrar(nombre=${persona.nombre})}"  class="btn btn-primary">borrar</a></td>
+	</tr>
+</table>
+
+<form action="formularioinsertar">
+<input type="submit" value="nueva" class="btn btn-primary"/>
+
+</form>
+</html>
